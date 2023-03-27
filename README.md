@@ -17,16 +17,19 @@ npm install -g tileserver-gl
 ```
 $ tileserver-gl osm-2020-02-10-v3.11_kenya_nairobi.mbtiles
 ```
+Open localhost:8080. Click XYZ and copy the address shown.
+
+![](images/tileserver.png)
 
 ## 4. Render the map using Leaflet
-#### Use 'tileLayer' function
+#### Insert the tile server URL in the `tileLayer` function
 ```
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
       function init() {
