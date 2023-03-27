@@ -8,7 +8,7 @@ npm install -g tileserver-gl
 ```
 
 ## 2. Download map tile data
-#### Visit Maptiler Data. Click Datasets.
+#### Visit Maptiler Data [https://www.maptiler.com/data/](https://www.maptiler.com/data/). Click Datasets.
 ![](images/maptiler_data_1.png)
 #### Select region and download in OpenStreetMap vector tiles format. (.mbtiles format)
 ![](images/maptiler_data_2.png)
