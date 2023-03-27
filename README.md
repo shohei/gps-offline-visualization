@@ -42,6 +42,7 @@ $ tileserver-gl osm-2020-02-10-v3.11_kenya_nairobi.mbtiles
 </html>
 ```
 Rendered result
+
 ![](images/jkuat.png)
 
 
