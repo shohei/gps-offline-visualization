@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+    <script>
+      function init() {
+              var mymap = L.map('mapcontainer');
+              mymap.setView([-1.091176, 37.011073], 15,);
+              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mymap);
+
+              navigator.geolocation.getCurrentPosition(function(location) {
+                      var latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+                      var marker = L.marker(latlng).addTo(mymap);
+                      var circle = L.circle(latlng, {
+                              color: 'blue',
+                              fillColor: '#428bca',
+                              fillOpacity: 0.5,
+                              radius: 20 
+                            }).addTo(mymap);
+                      mymap.setView(latlng, 13);
+                    });
+            }
+    </script>
+  </head>
+  <body onload="init()">
+    <div id="mapcontainer" style="width:600px;height:600px"></div>
+  </body>
+</html>
